@@ -1,12 +1,13 @@
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import Navbar from './components/Navbar';
+import GlobalStyle from './GlobalStyle';
+import Landing from './components/pages/Landing'
 
 function App() {
   return (
     <Router>
-      <Navbar/>
+      <GlobalStyle/>
       <Routes>
-        <Route path="/"/>
+        <Route path="/" element={<Landing/>}/>
       </Routes>
     </Router>
   );
