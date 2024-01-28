@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Link as LinkR } from 'react-router-dom'
-import { Link as LinkS } from 'react-scroll'
+import { Link as LinkR, useLocation } from 'react-router-dom'
 import { Palette } from '../assets/Colors';
 
 const Nav = styled.nav`
@@ -23,6 +22,7 @@ const Nav = styled.nav`
 const NavbarContainer = styled.nav`
     display: flex;
     justify-content: space-between;
+    align-items: center;
     height: 80px;
     z-index: 1;
     width: 100%;
@@ -49,16 +49,9 @@ const MainTitle = styled.li`
     font-size: 24px;
     display: block;
     font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    padding: 0;
-`;
-
-const SubTitle = styled.li`
-    color: ${Palette.st};
-    font-size: 15px;
-    letter-spacing: -.6px;
-    display: block;
-    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    margin-bottom: -5px;
+    margin-top: -5px;
 `;
 
 const NavMenu = styled.ul`
@@ -73,22 +66,42 @@ const NavItem = styled.li`
     height: 80px;
 `;
 
-const NavLinks = styled(LinkS)`
+const NavLinks = styled(LinkR)`
     color: #fff;
     display: flex;
     align-items: center;
     text-decoration: none;
     padding: 0 1rem;
     height: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
     cursor: pointer;
 
     &.active {
-        border-bottom: 3px solid #01bf71;
+        border-top: 3px solid ${Palette.mt};
     }
+
+    &:hover {
+        color: ${Palette.mt};
+    }
+
+    transition-duration: 150ms;
 `;
 
 function Navbar() {
-  return (
+    const NavRouter = ({to, children}) => {
+        const location = useLocation();
+        const isActive = location.pathname === to;
+
+        return (
+            <NavLinks to={to} className={isActive ? 'active' : ''}>
+                {children}
+            </NavLinks>
+        );
+    }
+    
+
+    return (
     <>
         <Nav>
             <NavbarContainer>
@@ -99,20 +112,22 @@ function Navbar() {
                     <MainTitle>
                         HACK
                     </MainTitle>
-                    <SubTitle>
-                        SPRING 2024
-                    </SubTitle>
                 </NavLogo>
                 <NavMenu>
                     <NavItem>
-                        <NavLinks to="about">
+                        <NavRouter to="/about">
                             About
-                        </NavLinks>
+                        </NavRouter>
                     </NavItem>
                     <NavItem>
-                        <NavLinks to="learn">
+                    <NavRouter to="/learn">
                             Learn
-                        </NavLinks>
+                        </NavRouter>
+                    </NavItem>
+                    <NavItem>
+                    <NavRouter to="/contribute">
+                            Contribute
+                        </NavRouter>
                     </NavItem>
                 </NavMenu>
             </NavbarContainer>

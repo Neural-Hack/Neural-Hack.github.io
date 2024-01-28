@@ -1,11 +1,34 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter as Router, Route, Routes, useLocation} from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion'
+import GlobalStyle from './GlobalStyle';
+import Landing from './pages/Landing'
+import NotFound from './pages/NotFound';
+import About from './pages/About';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+const AnimatedRoutes=()=>{
+  const location = useLocation();
+
+  return (
+    <AnimatePresence mod='sync'>
+    <GlobalStyle/>
+    <Routes location={location} key={location.pathname}>
+      <Route path="/" element={<Landing/>}/>
+      <Route path="/about" element={<About/>}/>
+      <Route path="*" element={<NotFound/>}/>
+    </Routes>
+    </AnimatePresence>
+);
+}
+
 root.render(
-    <App />
+  <Router>
+    <AnimatedRoutes />
+  </Router>
 );
 
 // If you want to start measuring performance in your app, pass a function

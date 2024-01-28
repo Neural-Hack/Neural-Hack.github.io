@@ -2,8 +2,9 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 import { Palette } from '../assets/Colors';
+import { motion } from 'framer-motion';
 
-export const TitleContainer = styled.div`
+const TitleContainer = styled.div`
 
     background-color: ${Palette.bg};
     height: 100vh;
@@ -21,14 +22,14 @@ export const TitleContainer = styled.div`
     };
 `;
 
-export const TitleText = styled.ul`
+const TitleText = styled.ul`
     margin: 0;
     padding: 0;
     float: left;
     margin-right: 15%;
 `;
 
-export const MainTitle = styled.li`
+const MainTitle = styled.li`
     color: ${Palette.st};
     letter-spacing: 4px;
     font-size: 48px;
@@ -36,7 +37,7 @@ export const MainTitle = styled.li`
     font-family: 'Montserrat', sans-serif;
 `;
 
-export const SubTitle = styled.li`
+const SubTitle = styled.li`
     color: ${Palette.st};
     font-size: 30px;
     letter-spacing: -.8px;
@@ -44,7 +45,7 @@ export const SubTitle = styled.li`
     font-family: 'Roboto', sans-serif;
 `;
 
-export const LandingBtn = styled.button`
+const LandingBtn = styled.button`
     font-family: 'Montserrat', sans-serif;
     letter-spacing: -.6px;
     transition-duration: 0.35s;
@@ -76,11 +77,17 @@ export const LandingBtn = styled.button`
 function Landing() {
     let navigate = useNavigate();
     const routeChange = () =>{ 
-        let path = `/home`; 
+        let path = `/about`; 
         navigate(path);
     }
 
     return (
+        <motion.div 
+        initial={{ opacity: 0, y: '100vh'  }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 1, y: '-100vh' }}
+        transition={{ duration: 1 }}
+        >
         <TitleContainer>
             <TitleText>
                 <MainTitle>
@@ -94,6 +101,7 @@ function Landing() {
                 Explore
             </LandingBtn>
         </TitleContainer>
+        </motion.div>
     )
 }
 
