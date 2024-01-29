@@ -3,7 +3,6 @@ import { useLocation, useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 import { Palette } from '../assets/Colors';
 import { motion } from 'framer-motion';
-import { fromLandingPage } from './About';
 
 const TitleContainer = styled.div`
 
@@ -78,31 +77,31 @@ const LandingBtn = styled.button`
 function Landing() {
     const navigate = useNavigate();
 
-    const routeChange = () =>{ 
-        let path = `/about`; 
+    const routeChange = () => {
+        let path = `/about`;
         navigate(path, { state: { fromLandingPage: true } });
     }
 
     return (
-        <motion.div 
-        initial={{ opacity: 0, y: '100vh'  }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 1, y: '-100vh' }}
-        transition={{ duration: 1 }}
+        <motion.div
+            initial={{ opacity: 0, y: '100vh' }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 1, y: '-100vh' }}
+            transition={{ duration: 1 }}
         >
-        <TitleContainer>
-            <TitleText>
-                <MainTitle>
-                NEURAL HACK 
-                </MainTitle>
-                <SubTitle>
-                SPRING 2024
-                </SubTitle>
-            </TitleText>
-            <LandingBtn onClick={routeChange}>
-                Explore
-            </LandingBtn>
-        </TitleContainer>
+            <TitleContainer>
+                <TitleText>
+                    <MainTitle>
+                        NEURAL HACK
+                    </MainTitle>
+                    <SubTitle>
+                        SPRING 2024
+                    </SubTitle>
+                </TitleText>
+                <LandingBtn onClick={routeChange}>
+                    Explore
+                </LandingBtn>
+            </TitleContainer>
         </motion.div>
     )
 }

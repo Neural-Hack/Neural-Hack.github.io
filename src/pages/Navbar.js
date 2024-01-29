@@ -12,7 +12,7 @@ const Nav = styled.nav`
     font-size: 1rem;
     position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 100;
 
     @media screen and (max-width: 960px) {
         transition: 0.8s all ease;
@@ -34,7 +34,6 @@ const NavLogo = styled(LinkR)`
     color: white;
     justify-self: flex-start;
     cursor: pointer;
-    font-size: pointer;
     display: flex;
     align-items: left;
     margin-left: 24px;
@@ -44,7 +43,7 @@ const NavLogo = styled(LinkR)`
 `
 
 const MainTitle = styled.li`
-    color: ${Palette.st};
+    color: ${Palette.mt};
     letter-spacing: 2px;
     font-size: 24px;
     display: block;
@@ -67,7 +66,7 @@ const NavItem = styled.li`
 `;
 
 const NavLinks = styled(LinkR)`
-    color: #fff;
+    color: ${Palette.mt};
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -84,13 +83,14 @@ const NavLinks = styled(LinkR)`
 
     &:hover {
         color: ${Palette.mt};
+        margin-top: -4px;
     }
 
     transition-duration: 150ms;
 `;
 
 function Navbar() {
-    const NavRouter = ({to, children}) => {
+    const NavRouter = ({ to, children }) => {
         const location = useLocation();
         const isActive = location.pathname === to;
 
@@ -100,41 +100,41 @@ function Navbar() {
             </NavLinks>
         );
     }
-    
+
 
     return (
-    <>
-        <Nav>
-            <NavbarContainer>
-                <NavLogo to='/about'>
-                    <MainTitle>
-                        NEURAL
-                    </MainTitle>
-                    <MainTitle>
-                        HACK
-                    </MainTitle>
-                </NavLogo>
-                <NavMenu>
-                    <NavItem>
-                        <NavRouter to="/about">
-                            About
-                        </NavRouter>
-                    </NavItem>
-                    <NavItem>
-                    <NavRouter to="/learn">
-                            Learn
-                        </NavRouter>
-                    </NavItem>
-                    <NavItem>
-                    <NavRouter to="/contribute">
-                            Contribute
-                        </NavRouter>
-                    </NavItem>
-                </NavMenu>
-            </NavbarContainer>
-        </Nav>
-    </>
-  )
+        <>
+            <Nav>
+                <NavbarContainer>
+                    <NavLogo to='/about'>
+                        <MainTitle>
+                            NEURAL
+                        </MainTitle>
+                        <MainTitle>
+                            HACK
+                        </MainTitle>
+                    </NavLogo>
+                    <NavMenu>
+                        <NavItem>
+                            <NavRouter to="/about">
+                                About
+                            </NavRouter>
+                        </NavItem>
+                        <NavItem>
+                            <NavRouter to="/learn">
+                                Learn
+                            </NavRouter>
+                        </NavItem>
+                        <NavItem>
+                            <NavRouter to="/contribute">
+                                Contribute
+                            </NavRouter>
+                        </NavItem>
+                    </NavMenu>
+                </NavbarContainer>
+            </Nav>
+        </>
+    )
 }
 
 export default Navbar

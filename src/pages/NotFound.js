@@ -40,15 +40,15 @@ const PageNotFound = styled.div`
 const NotFound = () => {
   return (
     <div>
-      <Navbar/>
+      <Navbar />
       <ErrorContainer>
         <FourOFour>
-          <TbError404/>
+          <TbError404 />
         </FourOFour>
         <PageNotFound>
           PAGE NOT FOUND
         </PageNotFound>
-    </ErrorContainer>
+      </ErrorContainer>
     </div>
   )
 }
