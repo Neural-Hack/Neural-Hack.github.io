@@ -1,13 +1,14 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Navbar from './Navbar'
 import styled from 'styled-components'
-import { Palette } from '../assets/Colors';
+import { ThemeProvider } from '@mui/material/styles'
+import { Palette, Theme } from '../assets/Colors';
 import { ValidationError, useForm } from '@formspree/react';
 import { PiHandWavingFill } from "react-icons/pi";
 import { TextField } from '@mui/material';
 
 const Container = styled.div`
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background-color: ${Palette.fg};
     display: flex;
@@ -46,46 +47,6 @@ const ApplyDoneBody = styled.div`
     text-align: center;
 `;
 
-const ApplyTitle = styled.div`
-    text-align: left;
-    color: ${Palette.mt};
-    word-wrap: break-word;
-    margin-top: 60px;
-    margin-bottom: 30px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 800;
-    font-size: 42px;
-    letter-spacing: -.8px;
-`;
-
-const ApplySubTitle = styled.div`
-    text-align: left;
-    color: ${Palette.st};
-    word-wrap: break-word;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    font-size: 30px;
-`;
-
-const ApplyBody = styled.p`
-    text-align: left;
-    color: ${Palette.mt};
-    width: 50%;
-    word-wrap: break-word;
-    font-family: 'Playfair Display', serif;
-    font-weight: 500;
-    font-size: 24px;
-`;
-
-const SAppTitle = styled.div`
-
-`;
-
-const SAppBody = styled.div`
-
-`;
-
-
 const FormContainer = styled.div`
     display: flex;
     flex-direction: column;
@@ -107,28 +68,10 @@ const Form = styled.form`
     display: flex;
     flex-direction: column;
     width: 30%;
+
     @media screen and (max-width: 960px){
         width: 50%;
     }
-`;
-
-const FormLabel = styled.label`
-  color: ${Palette.mt};
-  font-family: 'Playfair Display', serif;
-  font-size: 18px;
-  margin-bottom: 8px;
-`;
-
-const FormInput = styled.input`
-  padding: 8px;
-  margin-bottom: 16px;
-  font-size: 16px;
-`;
-
-const FormTextarea = styled.textarea`
-  padding: 8px;
-  margin-bottom: 16px;
-  font-size: 16px;
 `;
 
 const FormSubmitBtn = styled.button`
@@ -137,12 +80,15 @@ const FormSubmitBtn = styled.button`
   transition-duration: 0.35s;
   background-color: ${Palette.fg};
   color: ${Palette.mt};
-  margin-top: 20px;
-  padding: 8px 64px;
+  margin-top: 10px;
+  padding: 8px;
   border-style: solid;
   border-radius: 1px;
   border-color: ${Palette.st};
   cursor: pointer;
+  width: 30%;
+  text-align: center;
+  align-self: center;
 
   &:hover {
     background-color: ${Palette.st};
@@ -151,8 +97,14 @@ const FormSubmitBtn = styled.button`
   }
 `;
 
+const NameDiv = styled.div`
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+`;
+
 const Apply = () => {
-    const [state, handleSubmit, reset] = useForm('{your-form-id}');
+    const [state, handleSubmit] = useForm('xgegodgp');
 
     if (state.succeeded) {
         return (
@@ -180,28 +132,20 @@ const Apply = () => {
             <FormContainer>
                 <FormTitle>Join</FormTitle>
                 <Form onSubmit={handleSubmit}>
-                    <TextField id="firstName" label="First Name" variant="outlined"/>
-                    <ValidationError field="firstName" prefix="firstName" errors={state.errors} />
+                    <ThemeProvider theme={Theme}>
+                        <NameDiv>
+                            <  TextField id="firstName" label="First Name" variant="outlined" margin="dense" fullWidth />
+                            <TextField id="lastName" label="Last Name" variant="outlined" margin="dense" fullWidth />
+                        </NameDiv>
+                        <TextField id="studentId" label="Fullerton ID" variant="outlined" margin="dense" />
+                        <TextField id="email" label="Email" variant="outlined" margin="dense" />
+                        <TextField id="additional" label="Additional Info" multiline rows={4} margin="dense" helperText="Do you have past experience in this field?"/>
+                    </ThemeProvider>
 
-                    <TextField id="lastName" label="Last Name" variant="outlined"/>
                     <ValidationError field="firstName" prefix="firstName" errors={state.errors} />
-
-                    <FormLabel htmlFor="studentId">Fullerton ID</FormLabel>
-                    <FormInput
-                        type="text"
-                        id="studentId"
-                        name="studentId"
-                        required
-                    />
-                    <ValidationError field="firstName" prefix="firstName" errors={state.errors} />
-
-                    <FormLabel htmlFor="message">Additional Message</FormLabel>
-                    <FormTextarea
-                        id="message"
-                        name="message"
-                        rows="4"
-                    ></FormTextarea>
-                    <ValidationError field="firstName" prefix="firstName" errors={state.errors} />
+                    <ValidationError field="lastName" prefix="lastName" errors={state.errors} />
+                    <ValidationError field="studentId" prefix="studentId" errors={state.errors} />
+                    <ValidationError field="email" prefix="email" errors={state.errors} />
 
                     <FormSubmitBtn type="submit" disabled={state.submitting}>Join</FormSubmitBtn>
                 </Form>
