@@ -73,11 +73,12 @@ const NavLinks = styled(LinkR)`
     text-decoration: none;
     padding: 0 1rem;
     height: 100%;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
+    font-family: 'Open Sans', sans-serif;
+    font-size: .9rem;
     cursor: pointer;
 
     &.active {
+        transition-duration: 150ms;
         border-top: 3px solid ${Palette.mt};
     }
 
@@ -105,7 +106,7 @@ function Navbar() {
     <>
         <Nav>
             <NavbarContainer>
-                <NavLogo to='/home'>
+                <NavLogo to='/about'>
                     <MainTitle>
                         NEURAL
                     </MainTitle>

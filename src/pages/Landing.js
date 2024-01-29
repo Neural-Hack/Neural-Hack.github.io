@@ -1,8 +1,9 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 import { Palette } from '../assets/Colors';
 import { motion } from 'framer-motion';
+import { fromLandingPage } from './About';
 
 const TitleContainer = styled.div`
 
@@ -75,10 +76,11 @@ const LandingBtn = styled.button`
 `;
 
 function Landing() {
-    let navigate = useNavigate();
+    const navigate = useNavigate();
+
     const routeChange = () =>{ 
         let path = `/about`; 
-        navigate(path);
+        navigate(path, { state: { fromLandingPage: true } });
     }
 
     return (

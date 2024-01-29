@@ -3,6 +3,7 @@ import Navbar from './Navbar'
 import styled from 'styled-components';
 import { Palette } from '../assets/Colors';
 import { motion } from 'framer-motion';
+import { useLocation } from 'react-router-dom';
 
 const ContainerWho = styled.nav`
   display: flex;
@@ -13,9 +14,13 @@ const ContainerWho = styled.nav`
 `;
 
 const About = () => {
+  const location = useLocation();
+  const fromLandingPage = location.state && location.state.fromLandingPage;
+  console.log(fromLandingPage);
+
   return (
     <motion.div
-      initial={{ opacity: 0, y: '100vh'  }}
+      initial={fromLandingPage ? { opacity: 0, y: '100vh'  } : { opacity: 1, y: 0 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 2 }}
     >
