@@ -22,9 +22,9 @@ const Container = styled.div`
 
 const ContributeContainer = styled.div`
     background-color: ${Palette.fg};
-    width: 35%;
-    @media screen and (max-width: 1600px) {
-        width: 50%;
+    width: 50%;
+    @media screen and (max-width: 960px) {
+        width: 70%;
     }
     display: flex;
     flex-direction: column;
@@ -42,6 +42,10 @@ const ContributeTitle = styled.div`
     font-weight: 800;
     font-size: 42px;
     letter-spacing: -.8px;
+
+    @media screen and (max-width: 960px) {
+        font-size: 30px;
+    }
 `;
 
 const ContributeSubTitle = styled.div`
@@ -49,17 +53,25 @@ const ContributeSubTitle = styled.div`
     color: ${Palette.st};
     word-wrap: break-word;
     font-family: 'Roboto', sans-serif;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 30px;
+
+    @media screen and (max-width: 960px) {
+        font-size: 20px;
+    }
 `;
 
 const ContributeBody = styled.p`
     text-align: left;
     color: ${Palette.mt};
     word-wrap: break-word;
-    font-family: 'Playfair Display', serif;
-    font-weight: 500;
+    font-family: 'Ropa Sans', sans-serif;
+    font-weight: 400;
     font-size: 24px;
+
+    @media screen and (max-width: 960px) {
+        font-size: 18px;
+    }
 `;
 
 const Contribute = () => {

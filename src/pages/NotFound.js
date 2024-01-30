@@ -23,7 +23,11 @@ const FourOFour = styled.div`
     justify-content: center;
     align-items: center;
     color: ${Palette.mt};
-    font-size: 12rem;
+    font-size: 200px;
+
+    @media screen and (max-width: 960px) {
+        font-size: 140px;
+    }
 `;
 
 const PageNotFound = styled.div`
@@ -35,6 +39,14 @@ const PageNotFound = styled.div`
   font-family: 'Roboto', sans-serif;
   color: ${Palette.st};
   font-size: 60px;
+
+  @media screen and (max-width: 960px) {
+        font-size: 32px;
+    }
+
+    @media screen and (max-width: 350px) {
+    font-size: 24px;
+  }
 `;
 
 const NotFound = () => {

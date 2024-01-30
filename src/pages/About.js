@@ -28,9 +28,13 @@ const FEmpLogoTitle = styled.div`
   font-size: 44px;
   display: block;
   font-family: 'Montserrat', sans-serif;
-  font-weight: normal;
+  font-weight: 400;
   margin-bottom: -5px;
   margin-top: -5px;
+
+  @media screen and (max-width: 350px) {
+    font-size: 32px;
+  }
 `;
 
 const FEmpLogoSubTitle = styled.div`
@@ -39,6 +43,10 @@ const FEmpLogoSubTitle = styled.div`
   letter-spacing: -.8px;
   display: block;
   font-family: 'Roboto', sans-serif;
+
+  @media screen and (max-width: 350px) {
+    font-size: 22px;
+  }
 `;
 
 const FEmpLearnBtn = styled.button`
@@ -75,16 +83,20 @@ const ContainerWho = styled.div`
 
 const WhoTitle = styled.div`
   justify-content: center;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Ropa Sans', sans-serif;
   font-size: 36px;
   color: ${Palette.mt};
   margin-top: 44px;
-  font-weight: bold;
+  font-weight: 400;
+
+  @media screen and (max-width: 960px) {
+        font-size: 28px;
+    }
 `;
 
 const WhoBody = styled.p`
   justify-content: center;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Ropa Sans', sans-serif;
   font-size: 24px;
   color: ${Palette.st};
   margin-top: 20px;
@@ -93,6 +105,15 @@ const WhoBody = styled.p`
   text-align: center;
   word-wrap: break-word;
   width: 50%;
+
+  @media screen and (max-width: 960px) {
+        font-size: 20px;
+    }
+
+    @media screen and (max-width: 350px) {
+    font-size: 16px;
+    width: 90%;
+  }
 `;
 
 const WhoBtn = styled.button`
@@ -124,17 +145,17 @@ function About() {
 
   const navigate = useNavigate();
 
-  const routeChange = (path) =>{ 
+  const routeChange = (path) => {
     navigate(path);
   }
 
   return (
     <motion.div
-      initial={fromLandingPage ? { opacity: 0, y: '100vh'  } : { opacity: 1, y: 0 }}
+      initial={fromLandingPage ? { opacity: 0, y: '100vh' } : { opacity: 1, y: 0 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 2 }}
     >
-      <Navbar/>
+      <Navbar />
       <FEmpContainer>
         <FEmpLogoContainer>
           <FEmpLogoTitle>
@@ -153,7 +174,7 @@ function About() {
           Who are we?
         </WhoTitle>
         <WhoBody>
-          Neural Hack is an upcoming club for Fullerton College students who are interested in machine learning and aritificial intelligence. 
+          Neural Hack is an upcoming club for Fullerton College students who are interested in machine learning and aritificial intelligence.
         </WhoBody>
         <WhoTitle>
           What is our goal?

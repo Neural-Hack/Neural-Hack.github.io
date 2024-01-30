@@ -1,5 +1,5 @@
 import React from 'react'
-import { useLocation, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 import { Palette } from '../assets/Colors';
 import { motion } from 'framer-motion';
@@ -15,11 +15,10 @@ const TitleContainer = styled.div`
     align-items: center;
     display: flex;
 
-    @media screen and (max-width: 430px) {
-        padding: 5% 25%;
+    @media screen and (max-width: 900px) {
         flex-direction: column;
-        height: 50vh;
-    };
+        justify-content: space-around;
+    }
 `;
 
 const TitleText = styled.ul`
@@ -27,6 +26,15 @@ const TitleText = styled.ul`
     padding: 0;
     float: left;
     margin-right: 15%;
+
+    @media screen and (max-width: 900px) {
+        float: center;
+        display: flex;
+        flex-direction: column;
+        margin-right: 0%;
+        align-items: center;
+        text-align: center;
+    }
 `;
 
 const MainTitle = styled.li`
@@ -35,6 +43,14 @@ const MainTitle = styled.li`
     font-size: 48px;
     display: block;
     font-family: 'Montserrat', sans-serif;
+
+    @media screen and (max-width: 900px) {
+        font-size: 44px;
+    }
+
+    @media screen and (max-width: 375px) {
+        font-size: 28px;
+    }
 `;
 
 const SubTitle = styled.li`
@@ -43,6 +59,14 @@ const SubTitle = styled.li`
     letter-spacing: -.8px;
     display: block;
     font-family: 'Roboto', sans-serif;
+
+    @media screen and (max-width: 900px) {
+        font-size: 26px;
+    }
+
+    @media screen and (max-width: 375px) {
+        font-size: 18px;
+    }
 `;
 
 const LandingBtn = styled.button`
@@ -61,11 +85,11 @@ const LandingBtn = styled.button`
     border-color: ${Palette.st};
     cursor: pointer; 
 
-    @media screen and (max-width: 430px) {
-        margin-left: 0;
-        margin-top: 50%;
+    @media screen and (max-width: 960px) {
+        margin-left: 0%;
         justify-self: center;
-    };
+        align-self: center;
+    }
 
     &:hover {
         background-color: ${Palette.st};
@@ -99,7 +123,7 @@ function Landing() {
                     </SubTitle>
                 </TitleText>
                 <LandingBtn onClick={routeChange}>
-                    Explore
+                    Learn
                 </LandingBtn>
             </TitleContainer>
         </motion.div>

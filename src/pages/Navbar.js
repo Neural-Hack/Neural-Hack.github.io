@@ -5,11 +5,9 @@ import { Palette } from '../assets/Colors';
 
 const Nav = styled.nav`
     background: ${Palette.bg};
-    height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1rem;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -23,11 +21,16 @@ const NavbarContainer = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 80px;
     z-index: 1;
     width: 100%;
     padding: 0 24px;
     max-width: 1100px;
+    height: 80px;
+
+    @media screen and (max-width: 450px) {
+        padding: 0px 10px;
+        height: 60px;
+    }
 `;
 
 const NavLogo = styled(LinkR)`
@@ -40,6 +43,10 @@ const NavLogo = styled(LinkR)`
     font-weight: bold;
     text-decoration: none;
     flex-direction: column;
+
+    @media screen and (max-width: 450px) {
+        margin-left: 10px;
+    }
 `
 
 const MainTitle = styled.li`
@@ -51,6 +58,12 @@ const MainTitle = styled.li`
     font-weight: normal;
     margin-bottom: -5px;
     margin-top: -5px;
+
+    @media screen and (max-width: 450px) {
+        font-size: 18px;
+        margin-bottom: -3px;
+        margin-top: -3px;
+    }
 `;
 
 const NavMenu = styled.ul`
@@ -59,6 +72,11 @@ const NavMenu = styled.ul`
     list-style: none;
     text-align: center;
     margin-right: -22px;
+
+    @media screen and (max-width: 450px) {
+        margin: 0px;
+        padding: 0px;
+    }
 `;
 
 const NavItem = styled.li`
@@ -73,7 +91,7 @@ const NavLinks = styled(LinkR)`
     padding: 0 1rem;
     height: 100%;
     font-family: 'Open Sans', sans-serif;
-    font-size: .9rem;
+    font-size: 14px;
     cursor: pointer;
 
     &.active {
@@ -84,6 +102,16 @@ const NavLinks = styled(LinkR)`
     &:hover {
         color: ${Palette.mt};
         margin-top: -4px;
+    }
+
+    @media screen and (max-width: 450px) {
+        font-size: 12px;
+        padding: 0 9px;
+    }
+
+    @media screen and (max-width: 300px) {
+        font-size: 10px;
+        padding: 0 9px;
     }
 
     transition-duration: 150ms;
