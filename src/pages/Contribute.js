@@ -14,17 +14,27 @@ I am not enrolled but I would love to contribute!
 
 const Container = styled.div`
     background-color: ${Palette.fg};
-    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 `;
 
+const ContributeContainer = styled.div`
+    background-color: ${Palette.fg};
+    width: 35%;
+    @media screen and (max-width: 1600px) {
+        width: 50%;
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+`;
+
 const ContributeTitle = styled.div`
     text-align: left;
     color: ${Palette.mt};
-    width: 50%;
     word-wrap: break-word;
     margin-top: 60px;
     margin-bottom: 30px;
@@ -37,7 +47,6 @@ const ContributeTitle = styled.div`
 const ContributeSubTitle = styled.div`
     text-align: left;
     color: ${Palette.st};
-    width: 50%;
     word-wrap: break-word;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
@@ -47,7 +56,6 @@ const ContributeSubTitle = styled.div`
 const ContributeBody = styled.p`
     text-align: left;
     color: ${Palette.mt};
-    width: 50%;
     word-wrap: break-word;
     font-family: 'Playfair Display', serif;
     font-weight: 500;
@@ -65,6 +73,7 @@ const Contribute = () => {
         <div>
             <Navbar />
             <Container>
+                <ContributeContainer>
                 <ContributeTitle>
                     Interested?
                 </ContributeTitle>
@@ -72,8 +81,9 @@ const Contribute = () => {
                     I am currently enrolled at Fullerton College.
                 </ContributeSubTitle>
                 <ContributeBody>
-                    If you are currently enrolled at Fullerton College for Spring 2024 feel free to contact us at our <a href="mailto:neuralhackfc@gmail.com">email</a>.
+                    If you are currently enrolled at Fullerton College for Spring 2024 please fill out this brief form.
                 </ContributeBody>
+                </ContributeContainer>
             </Container>
         </div>
     )
