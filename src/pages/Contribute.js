@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from './Navbar'
 import styled from 'styled-components'
 import { Palette } from '../assets/Colors';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 /*
 Interested?
@@ -74,6 +74,37 @@ const ContributeBody = styled.p`
     }
 `;
 
+const FormBtn = styled.button`
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: -.6px;
+    transition-duration: 0.35s;
+    background-color: ${Palette.fg};
+    color: ${Palette.mt};
+    margin-top: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-style: solid;
+    border-radius: 1px;
+    border-color: ${Palette.st};
+    cursor: pointer; 
+    width: 15%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+
+    &:hover {
+        background-color: ${Palette.st};
+        color: ${Palette.fg};
+        transition-duration: 0.35s;
+    }
+
+    @media screen and (max-width: 1280px) {
+        width: 25%;
+    }
+`
+
 const Contribute = () => {
     const navigate = useNavigate();
 
@@ -86,15 +117,27 @@ const Contribute = () => {
             <Navbar />
             <Container>
                 <ContributeContainer>
-                <ContributeTitle>
-                    Interested?
-                </ContributeTitle>
-                <ContributeSubTitle>
-                    I am currently enrolled at Fullerton College.
-                </ContributeSubTitle>
-                <ContributeBody>
-                    If you are currently enrolled at Fullerton College for Spring 2024 please fill out this brief form.
-                </ContributeBody>
+                    <ContributeTitle>
+                        Interested?
+                    </ContributeTitle>
+                    <ContributeSubTitle>
+                        I am currently enrolled at Fullerton College.
+                    </ContributeSubTitle>
+                    <ContributeBody>
+                        If you are currently enrolled at Fullerton College for Spring 2024 please fill out this brief form.
+                        Keep in mind we cater to any level of experience but we value motivation and interest as the workload may be rigorous.
+                    </ContributeBody>
+
+                    <FormBtn onClick={() => routeChange('/join')}>
+                        Apply
+                    </FormBtn>
+
+                    <ContributeSubTitle>
+                        I am not enrolled but still interested.
+                    </ContributeSubTitle>
+                    <ContributeBody>
+                        a
+                    </ContributeBody>
                 </ContributeContainer>
             </Container>
         </div>

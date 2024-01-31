@@ -107,12 +107,13 @@ const WhoBody = styled.p`
   width: 50%;
 
   @media screen and (max-width: 960px) {
-        font-size: 20px;
-    }
+    font-size: 20px;
+    width: 75%;
+  }
 
-    @media screen and (max-width: 350px) {
-    font-size: 16px;
-    width: 90%;
+  @media screen and (max-width: 350px) {
+    font-size: 14px;
+    width: 95%;
   }
 `;
 
@@ -137,7 +138,7 @@ const WhoBtn = styled.button`
     color: ${Palette.fg};
     transition-duration: 0.35s;
   }
-`
+`;
 
 function About() {
   const location = useLocation();
