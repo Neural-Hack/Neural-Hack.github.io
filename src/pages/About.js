@@ -180,14 +180,12 @@ function About() {
           What is our goal?
         </WhoTitle>
         <WhoBody>
-          Our aim is to cater to a diverse range of students, including those without prior experince in machine learning and as well as those who are already experienced.
-        </WhoBody>
+          We cater to a diverse range of students, including those without prior experience in machine learning. Our goal is to introduce students to the vast field of data science through workshops, research, and other activities.        </WhoBody>
         <WhoTitle>
-          How do I join?
+          How can I participate?
         </WhoTitle>
         <WhoBody>
-          Any currently enrolled students at Fullerton College are eligible to officially join. If you are not enrolled but you are still interested in contributing feel free!
-        </WhoBody>
+          Any currently enrolled students at Fullerton College are eligible to join regardless of prior experience. If you are not enrolled but are still interested in contributing feel free to email or just participate through Github.        </WhoBody>
         <WhoBtn onClick={() => routeChange('/contribute')}>
           Join
         </WhoBtn>
