@@ -121,22 +121,22 @@ const Contribute = () => {
                         Interested?
                     </ContributeTitle>
                     <ContributeSubTitle>
-                        I am currently enrolled at Fullerton College.
+                        Currently enrolled at Fullerton College?
                     </ContributeSubTitle>
                     <ContributeBody>
-                        If you are currently enrolled at Fullerton College for Spring 2024 please fill out this brief form.
-                        Keep in mind we cater to any level of experience but we value motivation and interest as the workload may be rigorous.
+                        Please fill out this brief form.
+                        Keep in mind we cater to any level of experience but we value persistance and interest as the workload may be rigorous.
                     </ContributeBody>
 
                     <FormBtn onClick={() => routeChange('/join')}>
-                        Apply
+                        Sign Up
                     </FormBtn>
 
                     <ContributeSubTitle>
                         I am not enrolled but still interested.
                     </ContributeSubTitle>
                     <ContributeBody>
-                        a
+                        Don't worry! You can still contribute to our public Git repository or contact us through our email for any other inquires.
                     </ContributeBody>
                 </ContributeContainer>
             </Container>

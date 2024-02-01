@@ -100,11 +100,12 @@ const WhoBody = styled.p`
   font-size: 24px;
   color: ${Palette.st};
   margin-top: 20px;
+  margin-bottom: 100px;
   font-weight: normal;
   white-space: pre-wrap;
   text-align: center;
   word-wrap: break-word;
-  width: 50%;
+  width: 52%;
 
   @media screen and (max-width: 960px) {
     font-size: 20px;

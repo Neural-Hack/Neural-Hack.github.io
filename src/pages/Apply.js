@@ -154,7 +154,7 @@ const Apply = () => {
         <>
             <Navbar />
             <FormContainer>
-                <FormTitle>Join</FormTitle>
+                <FormTitle>Sign Up</FormTitle>
                 <Form onSubmit={handleFormSubmit}>
                     <ThemeProvider theme={Theme}>
                         <NameDiv>
