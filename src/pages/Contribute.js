@@ -2,7 +2,10 @@ import React from 'react'
 import Navbar from './Navbar'
 import styled from 'styled-components'
 import { Palette } from '../assets/Colors';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { FaGithub } from "react-icons/fa";
+import { AiOutlineMail } from "react-icons/ai";
+import Footer from './Footer';
 
 /*
 Interested?
@@ -46,6 +49,10 @@ const ContributeTitle = styled.div`
     @media screen and (max-width: 960px) {
         font-size: 30px;
     }
+
+    @media screen and (max-width: 350px) {
+        font-size: 24px;
+    }
 `;
 
 const ContributeSubTitle = styled.div`
@@ -59,6 +66,10 @@ const ContributeSubTitle = styled.div`
     @media screen and (max-width: 960px) {
         font-size: 20px;
     }
+
+    @media screen and (max-width: 350px) {
+        font-size: 16px;
+    }
 `;
 
 const ContributeBody = styled.p`
@@ -71,6 +82,10 @@ const ContributeBody = styled.p`
 
     @media screen and (max-width: 960px) {
         font-size: 18px;
+    }
+
+    @media screen and (max-width: 350px) {
+        font-size: 14px;
     }
 `;
 
@@ -101,9 +116,42 @@ const FormBtn = styled.button`
     }
 
     @media screen and (max-width: 1280px) {
-        width: 25%;
+        width: 40%;
     }
-`
+`;
+
+const ContactDiv = styled.div`
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    margin-bottom: 290px;
+    max-width: 600px;
+    width: 100%;
+
+    @media screen and (max-width: 960px) {
+        font-size: 18px;
+        width: 70%;
+    }
+`;
+
+const ContactGit = styled(Link)`
+    color: ${Palette.mt};
+    font-size: 3rem;
+
+    @media screen and (max-width: 350px) {
+        font-size: 2rem;
+    }
+`;
+
+const ContactLink = styled.a`
+    color: ${Palette.mt};
+    font-size: 3rem;
+
+    @media screen and (max-width: 350px) {
+        font-size: 2rem;
+    }
+`;
 
 const Contribute = () => {
     const navigate = useNavigate();
@@ -127,19 +175,32 @@ const Contribute = () => {
                         Please fill out this brief form.
                         Keep in mind we cater to any level of experience but we value persistance and interest as the workload may be rigorous.
                     </ContributeBody>
-
                     <FormBtn onClick={() => routeChange('/join')}>
-                        Sign Up
+                        Apply
                     </FormBtn>
-
                     <ContributeSubTitle>
                         I am not enrolled but still interested.
                     </ContributeSubTitle>
                     <ContributeBody>
                         Don't worry! You can still contribute to our public Git repository or contact us through our email for any other inquires.
                     </ContributeBody>
+                    <ContributeTitle>
+                        Contact Us
+                    </ContributeTitle>
+                    <ContributeSubTitle>
+                        You can reach us through Github or email.
+                    </ContributeSubTitle>
                 </ContributeContainer>
+                <ContactDiv>
+                    <ContactGit to="https://github.com/Neural-Hack">
+                        <FaGithub />
+                    </ContactGit>
+                    <ContactLink href="mailto:neuralhackfc@gmail.com">
+                        <AiOutlineMail />
+                    </ContactLink>
+                </ContactDiv>
             </Container>
+            <Footer />
         </div>
     )
 }

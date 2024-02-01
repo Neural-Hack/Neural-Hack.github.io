@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import Navbar from './Navbar'
 import styled from 'styled-components'
-import { ThemeProvider } from '@mui/material/styles'
-import { Palette, Theme } from '../assets/Colors';
+import { Palette } from '../assets/Colors';
 import { useForm } from '@formspree/react';
-import { PiHandWavingFill } from "react-icons/pi";
 import { TextField } from '@mui/material';
+import Footer from './Footer';
+import { FaDiscord } from "react-icons/fa";
 
 const Container = styled.div`
     width: 100vw;
@@ -47,6 +47,16 @@ const ApplyDoneBody = styled.div`
     text-align: center;
 `;
 
+const DiscordBtn = styled.a`
+    color: ${Palette.mt};
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 70px;
+`;
+
 const FormContainer = styled.div`
     display: flex;
     flex-direction: column;
@@ -59,7 +69,7 @@ const FormContainer = styled.div`
 const FormTitle = styled.div`
   color: ${Palette.mt};
   font-size: 36px;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Montserrat', sans-serif;
   margin-bottom: 20px;
   font-weight: bold;
 `;
@@ -103,6 +113,43 @@ const NameDiv = styled.div`
     gap: 16px;
 `;
 
+const StyledTextField = styled(TextField)`
+  & label.Mui-focused {
+    color: ${Palette.st}; // Label color when input is focused
+  }
+
+  & .MuiOutlinedInput-root {
+    & input, & textarea {
+      color: ${Palette.mt}; // Text color when typing inside the input field
+    }
+
+    & fieldset {
+      border-color: white; // Default border color (for unfocused state)
+    }
+
+    &:hover fieldset {
+      border-color: ${Palette.st}; // Hover border color
+    }
+
+    &.Mui-focused fieldset {
+      border-color: ${Palette.mt}; // Focused border color
+    }
+
+    &.Mui-error fieldset {
+      border-color: red; // Error state border color
+    }
+  }
+
+  & .MuiInputLabel-root { // This targets the label
+    color: ${Palette.mt}; // Normal label color
+  }
+
+  // Increase specificity for the helper text color
+  & .MuiFormHelperText-root.MuiFormHelperText-root {
+    color: white; // Helper text color
+  }
+`;
+
 const Apply = () => {
     const [state, handleSubmit] = useForm('xgegodgp');
 
@@ -139,14 +186,16 @@ const Apply = () => {
                         <ApplyDone>
                             See You Soon!
                         </ApplyDone>
-                        <ApplyDone>
-                            <PiHandWavingFill />
-                        </ApplyDone>
                         <ApplyDoneBody>
                             Your form has been successfully submitted. In the meanwhile why don't you join our discord?
                         </ApplyDoneBody>
+                        <DiscordBtn href="https://discord.gg/w2muvB7tBb">
+                            <FaDiscord />
+                        </DiscordBtn>
                     </ApplyContainer>
+                    
                 </Container>
+                <Footer/>
             </div>
         );
     }
@@ -156,98 +205,66 @@ const Apply = () => {
             <FormContainer>
                 <FormTitle>Sign Up</FormTitle>
                 <Form onSubmit={handleFormSubmit}>
-                    <ThemeProvider theme={Theme}>
-                        <NameDiv>
-                            <TextField
-                                id="firstName"
-                                name="firstName"
-                                label="First Name"
-                                variant="outlined"
-                                margin="dense"
-                                fullWidth
-                                error={isFormSubmitted && firstName === ''}
-                                helperText={isFormSubmitted && firstName === '' ? 'First Name is required' : ''}
-                                InputProps={{
-                                    style: { 
-                                        color: Palette.mt, 
-                                        borderColor: Palette.mt
-                                    },
-                                  }}
-                                InputLabelProps={{
-                                    style:{ color : Palette.mt },
-                                }}
-                                value={firstName}
-                                onChange={(e) => setFirstName(e.target.value)} />
-                            <TextField
-                                id="lastName"
-                                name="lastName"
-                                label="Last Name"
-                                variant="outlined"
-                                margin="dense" fullWidth
-                                error={isFormSubmitted && lastName === ''}
-                                helperText={isFormSubmitted && lastName === '' ? 'Last Name is required' : ''}
-                                InputProps={{
-                                    style: { 
-                                        color: Palette.mt, 
-                                        borderColor: Palette.mt
-                                    },
-                                  }}
-                                InputLabelProps={{
-                                    style:{ color : Palette.mt },
-                                }}
-                                value={lastName}
-                                onChange={(e) => setLastName(e.target.value)} />
-                        </NameDiv>
-                        <TextField
-                            id="studentId"
-                            name="studentId"
-                            label="Fullerton ID"
+                    <NameDiv>
+                        <StyledTextField
+                            id="firstName"
+                            name="firstName"
+                            label="First Name"
                             variant="outlined"
                             margin="dense"
-                            error={isFormSubmitted && studentId === ''}
-                            helperText={isFormSubmitted && studentId === '' ? 'Fullerton ID is required' : ''}
-                            InputProps={{
-                                style: { 
-                                    color: Palette.mt, 
-                                    borderColor: Palette.mt
-                                },
-                              }}
-                            InputLabelProps={{
-                                style:{ color : Palette.mt },
-                            }}
-                            value={studentId}
-                            onChange={(e) => setStudentId(e.target.value)} />
-                        <TextField id="email" name="email" label="Email" variant="outlined" margin="dense"
-                            value={email}
-                            onChange={handleEmailChange}
-                            error={(!isValidEmail && email.length > 0) || (isFormSubmitted && email.length === 0)}
-                            helperText={!isValidEmail && email.length > 0 ? 'Invalid email format' : isFormSubmitted && email.length === 0 ? 'Email is required' : ''}
-                            InputProps={{
-                                style: { 
-                                    color: Palette.mt, 
-                                    borderColor: Palette.mt
-                                },
-                              }}
-                            InputLabelProps={{
-                                style:{ color : Palette.mt },
-                            }}
-                            inputProps={{ pattern: '^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$' }} />
-                        <TextField id="additional" name="additional" label="Additional Info" multiline rows={4} margin="dense" helperText="Do you have past experience in this field?" 
-                        InputProps={{
-                            style: { 
-                                color: Palette.mt, 
-                                borderColor: Palette.mt
-                            },
-                          }}
-                        InputLabelProps={{
-                            style:{ color : Palette.mt },
-                        }}
-                        />
-                    </ThemeProvider>
+                            fullWidth
+                            error={isFormSubmitted && firstName === ''}
+                            helperText={isFormSubmitted && firstName === '' ? 'First Name is required' : ''}
+
+                            value={firstName}
+                            onChange={(e) => setFirstName(e.target.value)} />
+                        <StyledTextField
+                            id="lastName"
+                            name="lastName"
+                            label="Last Name"
+                            variant="outlined"
+                            margin="dense" fullWidth
+                            error={isFormSubmitted && lastName === ''}
+                            helperText={isFormSubmitted && lastName === '' ? 'Last Name is required' : ''}
+                            value={lastName}
+                            onChange={(e) => setLastName(e.target.value)} />
+                    </NameDiv>
+                    <StyledTextField
+                        id="studentId"
+                        name="studentId"
+                        label="Fullerton ID"
+                        variant="outlined"
+                        margin="dense"
+                        error={isFormSubmitted && studentId === ''}
+                        helperText={isFormSubmitted && studentId === '' ? 'Fullerton ID is required' : ''}
+                        value={studentId}
+                        onChange={(e) => setStudentId(e.target.value)} />
+                    <StyledTextField 
+                        id="email" 
+                        name="email" 
+                        label="Email" 
+                        variant="outlined" 
+                        margin="dense"
+                        value={email}
+                        onChange={handleEmailChange}
+                        error={(!isValidEmail && email.length > 0) || (isFormSubmitted && email.length === 0)}
+                        helperText={!isValidEmail && email.length > 0 ? 'Invalid email format' : isFormSubmitted && email.length === 0 ? 'Email is required' : ''}
+                        inputProps={{ pattern: '^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$' }} />
+                    <StyledTextField 
+                        id="additional" 
+                        name="additional" 
+                        label="Additional Info" 
+                        multiline 
+                        rows={4} 
+                        margin="dense" 
+                        helperText="Do you have past experience in this field?"
+                    />
 
                     <FormSubmitBtn type="submit" disabled={state.submitting}>Join</FormSubmitBtn>
                 </Form>
-            </FormContainer></>
+            </FormContainer>
+            <Footer />
+        </>
     )
 }
 

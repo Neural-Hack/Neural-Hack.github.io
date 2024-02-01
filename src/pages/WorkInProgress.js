@@ -1,11 +1,11 @@
 import React from 'react'
-import { TbError404 } from "react-icons/tb";
+import Navbar from './Navbar'
 import styled from 'styled-components'
 import { Palette } from '../assets/Colors';
-import Navbar from './Navbar';
+import { PiRobot } from "react-icons/pi";
 import Footer from './Footer';
 
-const ErrorContainer = styled.div`
+const Container = styled.div`
     height: 100vh;
     width: 100%;
     margin: 0;
@@ -17,26 +17,22 @@ const ErrorContainer = styled.div`
     background-color: ${Palette.fg};
 `;
 
-const FourOFour = styled.div`
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+const WorkIcon = styled.div`
     color: ${Palette.mt};
-    font-size: 200px;
+    font-size: 120px;
 
     @media screen and (max-width: 960px) {
-        font-size: 140px;
+        font-size: 100px;
     }
 `;
 
-const PageNotFound = styled.div`
+const WorkText = styled.div`
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   font-family: 'Roboto', sans-serif;
   color: ${Palette.st};
   font-size: 60px;
@@ -50,21 +46,22 @@ const PageNotFound = styled.div`
   }
 `;
 
-const NotFound = () => {
+const WorkInProgress = () => {
   return (
-    <div>
-      <Navbar />
-      <ErrorContainer>
-        <FourOFour>
-          <TbError404 />
-        </FourOFour>
-        <PageNotFound>
-          PAGE NOT FOUND
-        </PageNotFound>
-      </ErrorContainer>
-      <Footer/>
-    </div>
+    <>
+        <Navbar/>
+        <Container>
+            <WorkIcon>
+                <PiRobot/>
+            </WorkIcon>
+            <WorkText>
+                Sorry! <br/>
+                We are working on this.
+            </WorkText>
+        </Container>
+        <Footer/>
+    </>
   )
 }
 
-export default NotFound
+export default WorkInProgress

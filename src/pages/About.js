@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { Palette } from '../assets/Colors';
 import { motion } from 'framer-motion';
 import { useLocation, useNavigate } from 'react-router-dom';
+import Footer from './Footer';
 
 const FEmpContainer = styled.div`
   display: flex;
@@ -110,6 +111,7 @@ const WhoBody = styled.p`
   @media screen and (max-width: 960px) {
     font-size: 20px;
     width: 75%;
+    margin-bottom: 50px;
   }
 
   @media screen and (max-width: 350px) {
@@ -192,6 +194,7 @@ function About() {
           Join
         </WhoBtn>
       </ContainerWho>
+      <Footer/>
     </motion.div>
   )
 }
