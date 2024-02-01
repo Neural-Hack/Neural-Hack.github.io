@@ -96,10 +96,10 @@ const Footer = () => {
                     </MainTitle>
                 </NavLogo>
                 <LogoContainer>
-                    <ContactGit>
+                    <ContactGit to="https://github.com/Neural-Hack">
                         <FaGithub />
                     </ContactGit>
-                    <ContactLink>
+                    <ContactLink href="mailto:neuralhackfc@gmail.com">
                         <AiOutlineMail />
                     </ContactLink>
                 </LogoContainer>
