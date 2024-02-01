@@ -80,7 +80,7 @@ const Form = styled.form`
     width: 30%;
 
     @media screen and (max-width: 960px){
-        width: 50%;
+        width: 77%;
     }
 `;
 
