@@ -87,7 +87,7 @@ const Footer = () => {
     return (
         <div>
             <FooterContainer>
-                <NavLogo to='/home'>
+                <NavLogo to='/about'>
                     <MainTitle>
                         NEURAL
                     </MainTitle>
