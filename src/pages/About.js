@@ -11,7 +11,8 @@ const FEmpContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: ${Palette.bg};
+  //background-color: ${Palette.bg};
+  background-color: ${Palette.mt};
 `;
 
 const FEmpLogoContainer = styled.div`
@@ -24,7 +25,8 @@ const FEmpLogoContainer = styled.div`
 `
 
 const FEmpLogoTitle = styled.div`
-  color: ${Palette.mt};
+  //color: ${Palette.mt};
+  color: ${Palette.bg};
   letter-spacing: 2px;
   font-size: 44px;
   display: block;
@@ -39,14 +41,16 @@ const FEmpLogoTitle = styled.div`
 `;
 
 const FEmpLogoSubTitle = styled.div`
-  color: ${Palette.mt};
-  font-size: 30px;
+  //color: ${Palette.mt};
+  color: ${Palette.bg};
+  font-size: 22px;
   letter-spacing: -.8px;
+  margin-top: 20px;
   display: block;
   font-family: 'Roboto', sans-serif;
 
   @media screen and (max-width: 350px) {
-    font-size: 22px;
+    font-size: 18px;
   }
 `;
 
@@ -54,8 +58,10 @@ const FEmpLearnBtn = styled.button`
   font-family: 'Montserrat', sans-serif;
     letter-spacing: -.6px;
     transition-duration: 0.35s;
-    background-color: ${Palette.bg};
-    color: ${Palette.mt};
+    //background-color: ${Palette.bg};
+    background-color: ${Palette.mt};
+    color: ${Palette.bg};
+    //color: ${Palette.mt};
     margin-top: 20px;
     padding-top: 8px;
     padding-bottom: 8px;
@@ -63,27 +69,42 @@ const FEmpLearnBtn = styled.button`
     padding-right: 64px;
     border-style: solid;
     border-radius: 1px;
-    border-color: ${Palette.st};
+    border-color: ${Palette.bg};
+    //border-color: ${Palette.st};
     cursor: pointer; 
 
     &:hover {
-        background-color: ${Palette.st};
-        color: ${Palette.bg};
-        transition-duration: 0.35s;
+      color: ${Palette.mt};
+      background-color: ${Palette.bg};
+      //background-color: ${Palette.st};
+      //color: ${Palette.bg};
+      transition-duration: 0.35s;
     }
 `
 
+const Container = styled.div`
+  background-color: ${Palette.bg};
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+`;
+
 const ContainerWho = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  background-color: ${Palette.fg};
+  max-width: 900px;
+  width: 50%;
+    @media screen and (max-width: 960px) {
+        width: 70%;
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+  
   padding: 30px;
 `;
 
 const WhoTitle = styled.div`
-  justify-content: center;
   font-family: 'Ropa Sans', sans-serif;
   font-size: 36px;
   color: ${Palette.mt};
@@ -91,12 +112,11 @@ const WhoTitle = styled.div`
   font-weight: 400;
 
   @media screen and (max-width: 960px) {
-        font-size: 28px;
-    }
+    font-size: 28px;
+  }
 `;
 
 const WhoBody = styled.p`
-  justify-content: center;
   font-family: 'Ropa Sans', sans-serif;
   font-size: 24px;
   color: ${Palette.st};
@@ -104,9 +124,10 @@ const WhoBody = styled.p`
   margin-bottom: 100px;
   font-weight: normal;
   white-space: pre-wrap;
-  text-align: center;
+  text-align: left;
   word-wrap: break-word;
-  width: 52%;
+  border-left: 2px solid ${Palette.mt};
+  padding-left: 14px;
 
   @media screen and (max-width: 960px) {
     font-size: 20px;
@@ -124,22 +145,32 @@ const WhoBtn = styled.button`
   font-family: 'Montserrat', sans-serif;
   letter-spacing: -.6px;
   transition-duration: 0.35s;
-  background-color: ${Palette.fg};
+  //background-color: ${Palette.fg};
+  background-color: ${Palette.bg};
   color: ${Palette.mt};
-  margin-top: 20px;
+  margin-top: 10px;
   padding-top: 8px;
   padding-bottom: 8px;
-  padding-left: 64px;
-  padding-right: 64px;
+  padding-left: 20px;
+  padding-right: 20px;
   border-style: solid;
   border-radius: 1px;
   border-color: ${Palette.st};
   cursor: pointer; 
+  width: 15%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
 
   &:hover {
     background-color: ${Palette.st};
-    color: ${Palette.fg};
+    //color: ${Palette.fg};
+    color: ${Palette.bg};
     transition-duration: 0.35s;
+  }
+
+  @media screen and (max-width: 1280px) {
+    width: 40%;
   }
 `;
 
@@ -169,32 +200,34 @@ function About() {
             SPRING 2024
           </FEmpLogoSubTitle>
           <FEmpLearnBtn onClick={() => routeChange('/contribute')}>
-            Join
+            Join Us
           </FEmpLearnBtn>
         </FEmpLogoContainer>
       </FEmpContainer>
-      <ContainerWho>
-        <WhoTitle>
-          Who are we?
-        </WhoTitle>
-        <WhoBody>
-          Neural Hack is an upcoming club for Fullerton College students who are interested in machine learning and aritificial intelligence.
-        </WhoBody>
-        <WhoTitle>
-          What is our goal?
-        </WhoTitle>
-        <WhoBody>
-          We cater to a diverse range of students, including those without prior experience in machine learning. Our goal is to introduce students to the vast field of data science through workshops, research, and other activities.        </WhoBody>
-        <WhoTitle>
-          How can I participate?
-        </WhoTitle>
-        <WhoBody>
-          Any currently enrolled students at Fullerton College are eligible to join regardless of prior experience. If you are not enrolled but are still interested in contributing feel free to email or just participate through Github.        </WhoBody>
-        <WhoBtn onClick={() => routeChange('/contribute')}>
-          Join
-        </WhoBtn>
-      </ContainerWho>
-      <Footer/>
+      <Container>
+        <ContainerWho>
+          <WhoTitle>
+            Who are we?
+          </WhoTitle>
+          <WhoBody>
+            Neural Hack is an upcoming club at Fullerton College for students who are interested in machine learning and artificial intelligence. Catered to a diverse range of students, our club offers a space for all individuals interested in the world of data science.
+          </WhoBody>
+          <WhoTitle>
+            What is our goal?
+          </WhoTitle>
+          <WhoBody>
+            We cater to a diverse range of students, including those without prior experience in machine learning. Our goal is to introduce students to the vast field of data science through workshops, research, and other activities.        </WhoBody>
+          <WhoTitle>
+            How can I participate?
+          </WhoTitle>
+          <WhoBody>
+            Any currently enrolled students at Fullerton College are eligible to join regardless of prior experience. If you are not enrolled but are still interested in contributing feel free to email or just participate through Github.        </WhoBody>
+          <WhoBtn onClick={() => routeChange('/contribute')}>
+            Join Us
+          </WhoBtn>
+        </ContainerWho>
+      </Container>
+      <Footer />
     </motion.div>
   )
 }
