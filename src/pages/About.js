@@ -105,20 +105,20 @@ const ContainerWho = styled.div`
 `;
 
 const WhoTitle = styled.div`
-  font-family: 'Ropa Sans', sans-serif;
-  font-size: 36px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 32px;
   color: ${Palette.mt};
   margin-top: 44px;
   font-weight: 400;
 
   @media screen and (max-width: 960px) {
-    font-size: 28px;
+    font-size: 24px;
   }
 `;
 
 const WhoBody = styled.p`
-  font-family: 'Ropa Sans', sans-serif;
-  font-size: 24px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
   color: ${Palette.st};
   margin-top: 20px;
   margin-bottom: 100px;
@@ -130,13 +130,13 @@ const WhoBody = styled.p`
   padding-left: 14px;
 
   @media screen and (max-width: 960px) {
-    font-size: 20px;
+    font-size: 18px;
     width: 75%;
     margin-bottom: 50px;
   }
 
   @media screen and (max-width: 350px) {
-    font-size: 14px;
+    font-size: 12px;
     width: 95%;
   }
 `;
@@ -207,7 +207,7 @@ function About() {
       <Container>
         <ContainerWho>
           <WhoTitle>
-            Who are we?
+            What is Neural Hack?
           </WhoTitle>
           <WhoBody>
             Neural Hack is an upcoming club at Fullerton College for students who are interested in machine learning and artificial intelligence. Catered to a diverse range of students, our club offers a space for all individuals interested in the world of data science.
@@ -217,6 +217,12 @@ function About() {
           </WhoTitle>
           <WhoBody>
             We cater to a diverse range of students, including those without prior experience in machine learning. Our goal is to introduce students to the vast field of data science through workshops, research, and other activities.        </WhoBody>
+          <WhoTitle>
+            What will I gain by joining?
+          </WhoTitle>
+          <WhoBody>
+          By joining us at Neural Hack, you will have the opportunity to gain valuable insight and experience on the rapidly growing industry that is machine learning. Whether that being through engaging in beginner-friendly bootcamps or attending club meetings, our club will be your gateway to exploring this thrilling, dynamic field.
+          </WhoBody>
           <WhoTitle>
             How can I participate?
           </WhoTitle>
