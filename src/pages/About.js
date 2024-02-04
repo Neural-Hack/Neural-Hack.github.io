@@ -131,7 +131,7 @@ const WhoBody = styled.p`
 
   @media screen and (max-width: 960px) {
     font-size: 18px;
-    width: 75%;
+    width: 85%;
     margin-bottom: 50px;
   }
 
@@ -210,24 +210,30 @@ function About() {
             What is Neural Hack?
           </WhoTitle>
           <WhoBody>
-            Neural Hack is an upcoming club at Fullerton College for students who are interested in machine learning and artificial intelligence. Catered to a diverse range of students, our club offers a space for all individuals interested in the world of data science.
+            Neural Hack is an upcoming club at Fullerton College for students who are interested in machine learning and artificial intelligence.
+            Catered to a diverse range of students, our club offers a space for all individuals interested in the world of data science.
           </WhoBody>
           <WhoTitle>
             What is our goal?
           </WhoTitle>
           <WhoBody>
-            We cater to a diverse range of students, including those without prior experience in machine learning. Our goal is to introduce students to the vast field of data science through workshops, research, and other activities.        </WhoBody>
+            We cater to a diverse range of students, including those without prior experience in machine learning.
+            Our goal is to introduce students to the vast field of data science through workshops, research, and other activities.
+          </WhoBody>
           <WhoTitle>
             What will I gain by joining?
           </WhoTitle>
           <WhoBody>
-          By joining us at Neural Hack, you will have the opportunity to gain valuable insight and experience on the rapidly growing industry that is machine learning. Whether that being through engaging in beginner-friendly bootcamps or attending club meetings, our club will be your gateway to exploring this thrilling, dynamic field.
+            By joining us at Neural Hack, you will have the opportunity to gain valuable insight and experience on the rapidly growing industry that is machine learning.
+            Whether that being through engaging in beginner-friendly bootcamps or attending club meetings, our club will be your gateway to exploring this thrilling, dynamic field.
           </WhoBody>
           <WhoTitle>
             How can I participate?
           </WhoTitle>
           <WhoBody>
-            Any currently enrolled students at Fullerton College are eligible to join regardless of prior experience. If you are not enrolled but are still interested in contributing feel free to email or just participate through Github.        </WhoBody>
+            Any currently enrolled students at Fullerton College are eligible to join regardless of prior experience.
+            If you are not enrolled but are still interested in contributing feel free to email or just participate through Github.
+          </WhoBody>
           <WhoBtn onClick={() => routeChange('/contribute')}>
             Join Us
           </WhoBtn>
