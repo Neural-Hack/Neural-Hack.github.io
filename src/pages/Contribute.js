@@ -16,7 +16,7 @@ I am not enrolled but I would love to contribute!
 */
 
 const Container = styled.div`
-    background-color: ${Palette.fg};
+    background-color: ${Palette.bg};
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,7 +24,7 @@ const Container = styled.div`
 `;
 
 const ContributeContainer = styled.div`
-    background-color: ${Palette.fg};
+    background-color: ${Palette.bg};
     width: 50%;
     @media screen and (max-width: 960px) {
         width: 70%;
@@ -41,7 +41,7 @@ const ContributeTitle = styled.div`
     word-wrap: break-word;
     margin-top: 60px;
     margin-bottom: 30px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 800;
     font-size: 42px;
     letter-spacing: -.8px;
@@ -59,7 +59,7 @@ const ContributeSubTitle = styled.div`
     text-align: left;
     color: ${Palette.st};
     word-wrap: break-word;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 30px;
 
@@ -76,9 +76,11 @@ const ContributeBody = styled.p`
     text-align: left;
     color: ${Palette.mt};
     word-wrap: break-word;
-    font-family: 'Ropa Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 24px;
+    border-left: 2px solid ${Palette.mt};
+    padding-left: 14px;
 
     @media screen and (max-width: 960px) {
         font-size: 18px;

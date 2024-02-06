@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
@@ -11,6 +12,7 @@ import About from './pages/About';
 import Contribute from './pages/Contribute';
 import Apply from './pages/Apply';
 import WorkInProgress from './pages/WorkInProgress';
+import Learn from './pages/Learn';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -26,6 +28,7 @@ const AnimatedRoutes=()=>{
       <Route path="/contribute" element={<Contribute/>}/>
       <Route path="/learn" element={<WorkInProgress/>}/>
       <Route path="/join" element={<Apply/>}/>
+      <Route path="/wip" element={<Learn/>}/>
       <Route path="*" element={<NotFound/>}/>
     </Routes>
     </AnimatePresence>
