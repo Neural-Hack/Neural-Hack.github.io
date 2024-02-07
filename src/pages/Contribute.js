@@ -95,7 +95,7 @@ const FormBtn = styled.button`
     font-family: 'Montserrat', sans-serif;
     letter-spacing: -.6px;
     transition-duration: 0.35s;
-    background-color: ${Palette.fg};
+    background-color: ${Palette.bg};
     color: ${Palette.mt};
     margin-top: 10px;
     padding-top: 8px;
@@ -104,7 +104,7 @@ const FormBtn = styled.button`
     padding-right: 20px;
     border-style: solid;
     border-radius: 1px;
-    border-color: ${Palette.st};
+    border-color: ${Palette.mt};
     cursor: pointer; 
     width: 15%;
     margin-left: auto;
@@ -112,8 +112,8 @@ const FormBtn = styled.button`
     margin-bottom: 50px;
 
     &:hover {
-        background-color: ${Palette.st};
-        color: ${Palette.fg};
+        background-color: ${Palette.mt};
+        color: ${Palette.bg};
         transition-duration: 0.35s;
     }
 
