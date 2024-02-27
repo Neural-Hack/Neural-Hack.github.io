@@ -17,10 +17,22 @@ export const Footer = () => {
                     isExternal
                     className="font-bold text-current"
                     href="https://github.com/Neural-Hack/"
+                    target="_blank" rel="noopener noreferrer"
                     title="github"
                 >
                     <p className="">
                         Github
+                    </p>
+                </Link>
+                <Link
+                    isExternal
+                    className="font-bold text-current"
+                    href="https://discord.com/invite/w2muvB7tBb"
+                    target="_blank" rel="noopener noreferrer"
+                    title="discord"
+                >
+                    <p className="">
+                        Discord
                     </p>
                 </Link>
                 <Link

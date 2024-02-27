@@ -3,9 +3,7 @@ import { Metadata } from "next";
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Providers } from "./providers";
-import { Navbar } from "@/components/navbar";
 import clsx from "clsx";
-import { Footer } from "../components/footer";
 
 export const metadata: Metadata = {
 	title: {
@@ -19,8 +17,8 @@ export const metadata: Metadata = {
 	],
 	icons: {
 		icon: "/favicon.ico",
-		shortcut: "/favicon-16x16.png",
-		apple: "/apple-touch-icon.png",
+		shortcut: "/icon.png",
+		apple: "/icon.png",
 	},
 };
 
