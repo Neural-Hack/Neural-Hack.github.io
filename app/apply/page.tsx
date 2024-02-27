@@ -206,7 +206,7 @@ export default function ApplyPage() {
 	}
 
 	return (
-		<div className="flex flex-col justify-center h-full w-2/5 mx-auto items-center">
+		<div className="flex flex-col justify-center h-full sm:w-2/5 mx-auto items-center w-3/5">
 			<div className="flex justify-between w-full">
 				<Link
 					className="tracking-wider text-4xl block font-sans font-thin text-foreground leading-none text-left mb-6"
@@ -218,10 +218,10 @@ export default function ApplyPage() {
 				<div />
 			</div>
 			<div className="flex justify-between w-full">
-				<div className="text-3xl text-foreground font-light justify-start">
+				<div className="hidden md:flex text-3xl text-foreground font-light justify-start">
 					SPRING 2024
 				</div>
-				<div className="flex flex-col justify-end w-2/5">
+				<div className="flex flex-col justify-end md:w-2/5 w-full">
 					{currentForm}
 				</div>
 			</div>
