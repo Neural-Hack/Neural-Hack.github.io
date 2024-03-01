@@ -18,7 +18,7 @@ export default function DocsPage() {
 						Apply
 					</NHButton>
 					<div className="text-2xl text-foreground font-light mt-1 mb-5">
-						Not enrolled but still intersted?
+						Not enrolled but still interested?
 					</div>
 					<p className="text-lg text-foreground mb-20 font-normal border-l-2 border-foreground pl-4">
 						Don&apos;t worry! You can still contribute to our public Git repository or contact us through our email for any other inquires.
