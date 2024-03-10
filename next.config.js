@@ -1,4 +1,5 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {}
+const withNextra = require('nextra')({
+    theme: './nextra.theme.tsx'
+  })
 
-module.exports = nextConfig
+module.exports = withNextra()

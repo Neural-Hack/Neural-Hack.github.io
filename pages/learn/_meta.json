@@ -1,0 +1,27 @@
+{
+    "getting-started": {
+        "title": "Getting Started",
+        "type": "menu",
+        "items": {
+            "setup": {
+                "title": "Setup",
+                "href": "/learn/getting-started/setup"
+            },
+            "getting-familiar-with-collab": {
+                "title": "Getting Familiar With Collab",
+                "href": "/learn/getting-started/getting-familiar-with-collab"
+            }
+        }
+    },
+
+    "test": {
+        "title": "test",
+        "type": "menu",
+        "items": {
+            "bruh": {
+                "title": "Bruh",
+                "href": "/learn/test/bruh"
+            }
+        }
+    }
+}
