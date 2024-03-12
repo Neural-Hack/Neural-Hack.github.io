@@ -15,7 +15,7 @@
     },
 
     "test": {
-        "title": "test",
+        "title": "Test",
         "type": "menu",
         "items": {
             "bruh": {
