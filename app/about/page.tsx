@@ -8,7 +8,7 @@ export default function AboutPage() {
 					NEURAL HACK
 				</p>
 				<p className="text-foreground text-2xl mt-5 font-montserrat font-light">
-					SPRING 2024
+					FALL 2024
 				</p>
 				<NHButton className="text-sm" href="/contribute">
 					Join Us

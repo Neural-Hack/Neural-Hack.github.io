@@ -162,7 +162,7 @@ export default function Layout({ children, pageOpts }: NextraThemeLayoutProps) {
             <div className="relative flex flex-col h-screen">
                 <Navbar />
                 <div className="flex flex-row self-center gap-4 max-w-screen-xl w-full p-2">
-                    <div className="top-0 w-1/3 hidden md:block overflow-auto">
+                    <div className="top-0 w-1/3 hidden md:block overflow-auto sticky overflow-y-auto z-10">
                         {traverseMeta(meta)}  
                     </div>
                     <div className="w-full">
@@ -175,6 +175,9 @@ export default function Layout({ children, pageOpts }: NextraThemeLayoutProps) {
                         <div className="m-2">
                             {children}
                         </div>
+                    </div>
+                    <div className="bg-blue-500 w-1/4">
+                        a
                     </div>
                 </div>
                 <Footer />

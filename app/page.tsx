@@ -9,7 +9,7 @@ export default function Home() {
 						NEURAL HACK
 					</li>
 					<li className="font-thin font-montserrat text-foreground text-2xl sm:text-3xl md:text-4xl leading-snug sm:leading-snug md:leading-snug">
-						SPRING 2024
+						FALL 2024
 					</li>
 				</ul>
 				<NHButton className="justify-end" href="/about">
