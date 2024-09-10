@@ -13,8 +13,8 @@ export const siteConfig = {
 			href: "/learn",
 		},
 		{
-			label: "Contribute",
-			href: "/contribute",
+			label: "Join",
+			href: "/join",
 		}
 	],
 	navMenuItems: [
@@ -27,8 +27,8 @@ export const siteConfig = {
 			href: "/learn",
 		},
 		{
-			label: "Contribute",
-			href: "/contribute",
+			label: "Join",
+			href: "/join",
 		}
 	]
 };

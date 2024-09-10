@@ -1,0 +1,12 @@
+{
+    "getting-started": {
+        "title": "Getting Started",
+        "type": "menu",
+        "items": {
+            "setup": {
+                "title": "Setup",
+                "href": "/learn/getting-started/setup"
+            }
+        }
+    }
+}

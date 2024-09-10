@@ -70,13 +70,13 @@ export default function ApplyPage() {
 
 	useEffect(() => {
 		let timeoutId: NodeJS.Timeout;
-	
+
 		if (state.succeeded) {
 			timeoutId = setTimeout(() => {
 				window.location.href = '/about';
 			}, 8000);
 		}
-	
+
 		return () => {
 			if (timeoutId) {
 				clearTimeout(timeoutId);
@@ -196,7 +196,7 @@ export default function ApplyPage() {
 							Thanks for signing up!
 						</div>
 						<p className="text-lg text-foreground mb-20 font-normal">
-							In the meantime you should join our <Link href="https://discord.com/invite/w2muvB7tBb" target="_blank" rel="noopener noreferrer"> Discord</Link>. 
+							In the meantime you should join our <Link href="https://discord.com/invite/w2muvB7tBb" target="_blank" rel="noopener noreferrer"> Discord</Link>.
 							You should be redirected in 5 seconds if nothing happens you can click on our logo to return back to the homepage.
 						</p>
 					</div>
@@ -206,10 +206,10 @@ export default function ApplyPage() {
 	}
 
 	return (
-		<div className="flex flex-col justify-center h-full sm:w-2/5 mx-auto items-center w-3/5">
+		<div className="flex flex-col justify-center h-full w-full md:w-3/5 mx-auto items-center px-4">
 			<div className="flex justify-between w-full">
 				<Link
-					className="tracking-wider text-4xl block font-sans font-thin text-foreground leading-none text-left mb-6"
+					className="tracking-wider text-4xl md:text-3xl block font-sans font-thin text-foreground leading-none text-left mb-6"
 					href="/about"
 					title="logo"
 				>
@@ -217,14 +217,15 @@ export default function ApplyPage() {
 				</Link>
 				<div />
 			</div>
-			<div className="flex justify-between w-full">
-				<div className="hidden md:flex text-3xl text-foreground font-light justify-start">
-					SPRING 2024
+			<div className="flex flex-col md:flex-row justify-between w-full">
+				<div className="text-3xl md:text-2xl text-foreground font-light">
+					FALL 2024
 				</div>
-				<div className="flex flex-col justify-end md:w-2/5 w-full">
+				<div className="flex flex-col justify-end w-full md:w-2/5">
 					{currentForm}
 				</div>
 			</div>
 		</div>
+
 	);
 }
