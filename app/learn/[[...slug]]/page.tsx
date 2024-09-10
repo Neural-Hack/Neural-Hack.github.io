@@ -1,18 +1,20 @@
-import { allLearns } from 'contentlayer/generated';
-import { getMDXComponent } from "next-contentlayer/hooks";
+"use client"
 
-const Learn = ({ params}: { params: { slug: string[] }}) => {
-  const doc = allLearns.find((doc) => doc.slugAsParams === params.slug.join("/"));
+import { useRouter, usePathname } from 'next/navigation';
+import { useEffect } from 'react';
 
-  if (!doc)
-    return (<> <h1>NOT FOUND</h1> </>);
-  const MDXContent = getMDXComponent(doc.body.code);
+export default function Learn() {
+  const router = useRouter();
+  const pathname = usePathname();
+
+  useEffect(() => {
+    if (pathname === '/learn') {
+      router.push('/learn/getting-started/setup');
+    }
+  }, [pathname, router]);
 
   return (
-    <>
-      <MDXContent />
-    </>
+    <div>
+    </div>
   );
-};
-
-export default Learn;
+}

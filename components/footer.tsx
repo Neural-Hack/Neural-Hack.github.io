@@ -46,7 +46,6 @@ export const Footer = () => {
                     </p>
                 </Link>
             </div>
-            <p className="text-center">@2024 NeuralHack</p>
         </footer>
     );
 }

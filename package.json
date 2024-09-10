@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:content": "contentlayer2 build",
     "start": "next start",
     "lint": "next lint"
   },
@@ -23,11 +24,13 @@
     "@nextui-org/theme": "2.1.17",
     "@react-aria/ssr": "^3.8.0",
     "@react-aria/visually-hidden": "^3.8.6",
+    "@tailwindcss/typography": "^0.5.15",
     "@types/node": "20.5.7",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
     "autoprefixer": "10.4.16",
     "clsx": "^2.1.0",
+    "date-fns": "^3.6.0",
     "eslint": "8.48.0",
     "eslint-config-next": "14.0.2",
     "framer-motion": "^10.18.0",

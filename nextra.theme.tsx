@@ -20,10 +20,11 @@ import {
     ModalFooter,
     useDisclosure
 } from "@nextui-org/modal";
+import customComponents from './mdx-components';
+import { MDXProvider } from '@mdx-js/react';
 
 /*
 I PROMISE I WILL CLEAN THIS JUNK LATER.
-- EJP
 */
 
 interface SMeta {
@@ -159,11 +160,13 @@ export default function Layout({ children, pageOpts }: NextraThemeLayoutProps) {
 
     return (
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-            <div className="relative flex flex-col h-screen">
+            <div className="relative flex flex-col min-h-screen">
                 <Navbar />
-                <div className="flex flex-row self-center gap-4 max-w-screen-xl w-full p-2">
-                    <div className="top-0 w-1/3 hidden md:block overflow-auto sticky overflow-y-auto z-10">
-                        {traverseMeta(meta)}  
+                <div className="flex flex-1 flex-row self-center gap-4 max-w-screen-xl w-full p-2">
+                    <div className="sticky top-4 w-1/3 hidden md:block overflow-auto max-h-screen">
+                        <div className="fixed overflow-auto max-h-screen">
+                            {traverseMeta(meta)}  
+                        </div>
                     </div>
                     <div className="w-full">
                         <Button className="md:hidden flex w-full" variant="shadow" onPress={onOpen}>
@@ -173,11 +176,10 @@ export default function Layout({ children, pageOpts }: NextraThemeLayoutProps) {
                             {Bread({ activePath })}
                         </div>
                         <div className="m-2">
-                            {children}
+                            <MDXProvider components={customComponents}>
+                                {children}
+                            </MDXProvider>
                         </div>
-                    </div>
-                    <div className="bg-blue-500 w-1/4">
-                        a
                     </div>
                 </div>
                 <Footer />
