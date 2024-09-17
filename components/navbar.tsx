@@ -33,7 +33,7 @@ export const Navbar = () => {
 							href="/about"
 							title="logo"
 						>
-							NEURAL<br/>HACK
+							DEEP LEARNING CLUB
 						</Link>
 					</div>
 				</NavbarBrand>

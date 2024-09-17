@@ -1,12 +1,16 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-	name: "Neural Hack",
-	description: "Neural Hack Spring 2024 Fullerton College Club",
+	name: "Deep Learning Club",
+	description: "Deep Learning Club Fall 2024 Fullerton College Club",
 	navItems: [
 		{
 			label: "About",
 			href: "/about",
+		},
+		{
+			label: "Events",
+			href: "/events"
 		},
 		{
 			label: "Learn",
@@ -21,6 +25,10 @@ export const siteConfig = {
 		{
 			label: "About",
 			href: "/about",
+		},
+		{
+			label: "Events",
+			href: "/events"
 		},
 		{
 			label: "Learn",

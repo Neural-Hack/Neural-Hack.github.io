@@ -9,7 +9,7 @@ export const Footer = () => {
                     href="/about"
                     title="logo"
                 >
-                    NEURAL<br/>HACK
+                    DEEP LEARNING<br/>CLUB
                 </Link>
             </div>
             <div className="flex flex-row gap-4">

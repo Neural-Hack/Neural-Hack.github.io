@@ -213,12 +213,12 @@ export default function ApplyPage() {
 					href="/about"
 					title="logo"
 				>
-					NEURAL<br />HACK
+					DEEP LEARNING<br />CLUB
 				</Link>
 				<div />
 			</div>
 			<div className="flex flex-col md:flex-row justify-between w-full">
-				<div className="text-3xl md:text-2xl text-foreground font-light">
+				<div className="text-3xl md:text-2xl text-foreground font-light mb-8 md:mb-0">
 					FALL 2024
 				</div>
 				<div className="flex flex-col justify-end w-full md:w-2/5">
@@ -226,6 +226,5 @@ export default function ApplyPage() {
 				</div>
 			</div>
 		</div>
-
 	);
 }

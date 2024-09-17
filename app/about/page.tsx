@@ -4,23 +4,23 @@ export default function AboutPage() {
 	return (
 		<div className="flex flex-col justify-center">
 			<div className="flex flex-col items-center justify-center mt-10 mb-20 bg-background space-y-5">
-				<p className="text-foreground text-4xl font-light font-montserrat tracking-widest">
-					NEURAL HACK
+			<p className="text-2xl sm:text-3xl md:text-4xl font-light font-montserrat tracking-wide sm:tracking-wider md:tracking-widest text-foreground">
+					DEEP LEARNING CLUB
 				</p>
 				<p className="text-foreground text-2xl mt-5 font-montserrat font-light">
 					FALL 2024
 				</p>
-				<NHButton className="text-sm" href="/contribute">
+				<NHButton className="text-sm" href="/join">
 					Join Us
 				</NHButton>
 			</div>
 			<div className="flex flex-col items-center justify-center bg-background lg:w-1/2 w-11/12 max-w-2xl self-center">
 				<div>
 					<div className="text-2xl text-foreground font-light mt-11 mb-5">
-						What is Neural Hack?
+						What is Deep Learning Club?
 					</div>
 					<p className="text-lg text-foreground mb-20 font-normal border-l-2 border-foreground pl-4">
-						Neural Hack is an upcoming club at Fullerton College for students who are interested in machine learning and artificial intelligence. Catered to a diverse range of students, our club offers a space for all individuals interested in the world of data science.
+						Deep Learning Club is an upcoming club at Fullerton College for students who are interested in machine learning and artificial intelligence. Catered to a diverse range of students, our club offers a space for all individuals interested in the world of data science.
 					</p>
 				</div>
 				<div>
@@ -36,7 +36,7 @@ export default function AboutPage() {
 						What will I gain by joining?
 					</div>
 					<p className="text-lg text-foreground mb-20 font-normal border-l-2 border-foreground pl-4">
-					By joining us at Neural Hack, you will have the opportunity to gain valuable insight and experience on the rapidly growing industry that is machine learning. Whether that being through engaging in beginner-friendly bootcamps or attending club meetings, our club will be your gateway to exploring this thrilling, dynamic field.
+					By joining us at Deep Learning Club, you will have the opportunity to gain valuable insight and experience on the rapidly growing industry that is machine learning. Whether that being through engaging in beginner-friendly bootcamps or attending club meetings, our club will be your gateway to exploring this thrilling, dynamic field.
 					</p>
 				</div>
 				<div>

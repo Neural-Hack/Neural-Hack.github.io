@@ -24,6 +24,6 @@
       "contentlayer/generated": ["./.contentlayer/generated"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", ".contentlayer/generated", "mdx-components.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", ".contentlayer/generated", "mdx-components.jsx", "app/calendar/page.jsx", "app/calendar/page.jsx"],
   "exclude": ["node_modules"]
 }
