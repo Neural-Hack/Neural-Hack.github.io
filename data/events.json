@@ -18,6 +18,27 @@
     "title": "Club Meeting",
     "time": "3 to 4 pm",
     "where": "Room 214 (Student Center)",
-    "description": "First general meeting"
+    "description": "First general meeting goals and competitions"
+  },
+  {
+    "date": "2024-09-27",
+    "title": "CPP Fine Tuning Workshop",
+    "time": "6 pm",
+    "where": "Zoom",
+    "description": "Cal Poly Pomona Engineering Club x Deep Learning Club object detection fine tuning workshop"
+  },
+  {
+    "date": "2024-10-04",
+    "title": "Intro Python Workshop",
+    "time": "2 to 3 pm",
+    "where": "Room 1417",
+    "description": "Introductory Python Workshop hosted by Darren and Chris"
+  },
+  {
+    "date": "2024-10-04",
+    "title": "General Meeting",
+    "time": "3 to 4 pm",
+    "where": "Room 1417",
+    "description": "Introduction to Deep Learning"
   }
 ]
