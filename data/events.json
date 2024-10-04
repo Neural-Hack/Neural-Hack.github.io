@@ -32,13 +32,27 @@
     "title": "Intro Python Workshop",
     "time": "2 to 3 pm",
     "where": "Room 1417",
-    "description": "Introductory Python Workshop hosted by Darren and Chris"
+    "description": "Introductory Python Workshop hosted by Darren and Chris. Introducing a small Python project."
   },
   {
     "date": "2024-10-04",
     "title": "General Meeting",
     "time": "3 to 4 pm",
     "where": "Room 1417",
-    "description": "Introduction to Deep Learning"
+    "description": "Creating the first round of groups for our in-club competition and introducing data preprocessing."
+  },
+  {
+    "date": "2024-10-11",
+    "title": "Intro Python Workshop",
+    "time": "2 to 3 pm",
+    "where": "Room 1417",
+    "description": "Introductory Python Workshop 3"
+  },
+  {
+    "date": "2024-10-11",
+    "title": "General Meeting",
+    "time": "3 to 4 pm",
+    "where": "Room 1417",
+    "description": "General meeting 3"
   }
 ]
