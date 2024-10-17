@@ -46,10 +46,24 @@
     "title": "Intro Python Workshop",
     "time": "2 to 3 pm",
     "where": "Room 1417",
-    "description": "Introductory Python Workshop 3"
+    "description": "Pushed to next week"
   },
   {
     "date": "2024-10-11",
+    "title": "General Meeting",
+    "time": "3 to 4 pm",
+    "where": "Room 1417",
+    "description": "A2RL drone"
+  },
+  {
+    "data": "2024-10-18",
+    "title": "Intro Python Workshop",
+    "time": "2 to 3 pm",
+    "where": "Room 1417",
+    "description": "Introductory Python Workshop 3"
+  },
+  {
+    "date": "2024-10-18",
     "title": "General Meeting",
     "time": "3 to 4 pm",
     "where": "Room 1417",
