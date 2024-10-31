@@ -68,5 +68,33 @@
     "time": "3 to 4 pm",
     "where": "Room 1417",
     "description": "General meeting 3"
+  },
+  {
+    "data": "2024-10-25",
+    "title": "Intro Python Workshop",
+    "time": "2 to 3 pm",
+    "where": "Room 1417",
+    "description": "Introductory Python Workshop 4"
+  },
+  {
+    "date": "2024-10-25",
+    "title": "Theory Meeting I",
+    "time": "3 to 4 pm",
+    "where": "Room 1417",
+    "description": "A brief overview of the mathematical theory behind deep learning."
+  },
+  {
+    "data": "2024-11-01",
+    "title": "Intro Python Workshop",
+    "time": "2 to 3 pm",
+    "where": "Room 1417",
+    "description": "Introductory Python Workshop 5"
+  },
+  {
+    "date": "2024-11-01",
+    "title": "General Meeting",
+    "time": "3 to 4 pm",
+    "where": "Room 1417",
+    "description": "General meeting 4"
   }
 ]
