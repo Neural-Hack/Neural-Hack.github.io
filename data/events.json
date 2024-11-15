@@ -96,5 +96,26 @@
     "time": "3 to 4 pm",
     "where": "Room 716",
     "description": "General meeting 4"
+  },
+  {
+    "data": "2024-11-08",
+    "title": "No Meeting For Python Workshop",
+    "time": "2 to 3 pm",
+    "where": "Room 716",
+    "description": "Introductory Python Workshop 5"
+  },
+  {
+    "date": "2024-11-08",
+    "title": "General Meeting",
+    "time": "3 to 4 pm",
+    "where": "Room 716",
+    "description": "General meeting"
+  },
+  {
+    "date": "2024-11-15",
+    "title": "No Meeting",
+    "time": "3 to 4 pm",
+    "where": "N/A",
+    "description": "NO MEETING!"
   }
 ]
